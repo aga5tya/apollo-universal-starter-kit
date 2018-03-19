@@ -5,15 +5,15 @@ type SubscribeToMore = (option: SubscribeToMoreOptions) => void;
 type AddCounterFN = (amount: number) => any;
 
 export interface Counter {
-  counter: number;
+  counter: Amount;
 }
 
 interface Amount {
   amount: number;
 }
 
-interface Data {
-  data: CounterUpdated;
+export interface Data<T> {
+  data: T;
 }
 
 interface CounterUpdated {
@@ -21,7 +21,7 @@ interface CounterUpdated {
 }
 
 export interface SubscriptionData {
-  subscriptionData: Data;
+  subscriptionData: Data<CounterUpdated>;
 }
 
 export interface CounterResponse {
