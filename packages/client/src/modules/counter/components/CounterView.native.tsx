@@ -3,19 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { Button } from '../../common/components';
 
-interface Counter {
-  amount: number;
-}
-
-interface CounterProps {
-  loading: boolean;
-  counter: Counter;
-  reduxCount: number;
-  counterState: number;
-  addCounter: (amount: number) => any;
-  addCounterState: (amount: number) => any;
-  onReduxIncrement: (amount: number) => any;
-}
+import { Counter, CounterProps } from '../models';
 
 const CounterView = ({
   loading,
@@ -59,7 +47,7 @@ const CounterView = ({
   }
 };
 
-const styles = StyleSheet.create({
+const styles: any = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
